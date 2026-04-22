@@ -1,4 +1,17 @@
-export const products = [
+export interface Product {
+  id: string;
+  brand: string;
+  name: string;
+  description: string;
+  benefits: string[];
+  price: number;
+  images: {
+    main: string;
+    gallery: string[];
+  };
+}
+
+export const products: Product[] = [
   {
     id: "product-1",
     brand: "Off-White",
@@ -12,12 +25,12 @@ export const products = [
     ],
     price: 775,
     images: {
-      main: "/assets/images/products/off-white-1.png",
+      main: "/products/off-white-1.png",
       gallery: [
-        "/assets/images/products/off-white-1.png",
-        "/assets/images/products/off-white-2.png",
-        "/assets/images/products/off-white-3.png",
-        "/assets/images/products/off-white-4.png",
+        "/products/off-white-1.png",
+        "/products/off-white-2.png",
+        "/products/off-white-3.png",
+        "/products/off-white-4.png",
       ],
     },
   },
@@ -34,12 +47,12 @@ export const products = [
     ],
     price: 200,
     images: {
-      main: "/assets/images/products/nike-force-1.png",
+      main: "/products/nike-force-1.png",
       gallery: [
-        "/assets/images/products/nike-force-1.png",
-        "/assets/images/products/nike-force-2.png",
-        "/assets/images/products/nike-force-3.png",
-        "/assets/images/products/nike-force-4.png",
+        "/products/nike-force-1.png",
+        "/products/nike-force-2.png",
+        "/products/nike-force-3.png",
+        "/products/nike-force-4.png",
       ],
     },
   },
@@ -56,12 +69,12 @@ export const products = [
     ],
     price: 160,
     images: {
-      main: "/assets/images/products/nike-cosmic-1.png",
+      main: "/products/nike-cosmic-1.png",
       gallery: [
-        "/assets/images/products/nike-cosmic-1.png",
-        "/assets/images/products/nike-cosmic-2.png",
-        "/assets/images/products/nike-cosmic-3.png",
-        "/assets/images/products/nike-cosmic-4.png",
+        "/products/nike-cosmic-1.png",
+        "/products/nike-cosmic-2.png",
+        "/products/nike-cosmic-3.png",
+        "/products/nike-cosmic-4.png",
       ],
     },
   },
@@ -78,12 +91,12 @@ export const products = [
     ],
     price: 160,
     images: {
-      main: "/assets/images/products/adidas-1.png",
+      main: "/products/adidas-1.png",
       gallery: [
-        "/assets/images/products/adidas-1.png",
-        "/assets/images/products/adidas-2.png",
-        "/assets/images/products/adidas-3.png",
-        "/assets/images/products/adidas-4.png",
+        "/products/adidas-1.png",
+        "/products/adidas-2.png",
+        "/products/adidas-3.png",
+        "/products/adidas-4.png",
       ],
     },
   },

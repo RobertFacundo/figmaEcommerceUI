@@ -1,0 +1,31 @@
+body{
+    font-family: "Fenix", serif;
+    background-color: white;
+}
+body.dark{
+    background-color: rgb(22, 21, 21);
+}
+.font-hand{
+   font-family: "Patrick Hand", cursive;
+}
+
+.font-work{
+    font-family: font-family: "Work Sans", sans-serif;;
+}
+
+.hover-button{
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-button:hover {
+  transform: scale(1.05);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE */
+  scrollbar-width: none;     /* Firefox */
+}
