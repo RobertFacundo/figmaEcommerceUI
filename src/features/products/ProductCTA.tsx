@@ -11,6 +11,7 @@ type ProductCTAProps = {
 const ProductCTA = ({ product }: ProductCTAProps) => {
     const dispatch = useAppDispatch();
     const [quantity, setQuantity] = useState(1);
+    const [added, setAdded] = useState(false);
 
     const decrease = () => {
         if (quantity > 1) setQuantity(prev => prev - 1);
@@ -22,7 +23,11 @@ const ProductCTA = ({ product }: ProductCTAProps) => {
 
     const handleAddToCart = () => {
         dispatch(addItem({ product, quantity }))
+
+        setAdded(true);
         setQuantity(1)
+
+        setTimeout(() => setAdded(false), 1200)
     }
 
     return (
@@ -73,7 +78,13 @@ const ProductCTA = ({ product }: ProductCTAProps) => {
                 onClick={handleAddToCart}
                 className="font-work mt-4 bg-black text-white dark:bg-white dark:text-black py-3 rounded-full font-medium transition cursor-pointer"
             >
-                Add to cart
+                {added ? (
+                    <span className="flex items-center justify-center gap-2">
+                        Added <span className="text-green-400">✓</span>
+                    </span>
+                ) : (
+                    "Add to cart"
+                )}
             </motion.button>
 
         </motion.div>

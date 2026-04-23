@@ -10,13 +10,21 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/product/:id' element={<ProductDetail />} />
-      </Routes>
-      <Footer/>
+      <div className="min-h-screen flex flex-col">
+
+        <NavBar />
+
+        <main className="flex-1">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/product/:id' element={<ProductDetail />} />
+          </Routes>
+        </main>
+
+        <Footer />
+
+      </div>
     </Router>
   )
 }

@@ -18,12 +18,20 @@ const Footer = () => {
     const isLight = theme === 'light'
 
     return (
-        <footer className='flex justify-between md:justify-around items-center bottom-0 items-center p-4 dark:bg-white bg-black transition-all duration-700 ease-in-out left-0 w-full shadow-[0_-4px_6px_rgba(0,0,0,0.1)]'>
+        <footer className='flex justify-between md:justify-around items-center items-center p-4 dark:bg-white bg-black transition-all duration-700 ease-in-out w-full shadow-[0_-4px_6px_rgba(0,0,0,0.1)]'>
             <div className='flex flex-col md:flex-row gap-4'>
                 <img src={isLight ? logoTheme : logo} alt="Logo" />
                 <div className='font-hand text-m flex flex-col md:flex-row gap-1 text-zinc-500 dark:text-zinc-500'>
-                    <p >© 2023 dot.cards text task.</p>
-                    <p>All rights reserved</p>
+                    <p>
+                        Coded by{" "}
+                        <a className="underline hover:text-white dark:hover:text-black" href="https://github.com/RobertFacundo" target="_blank">
+                            Facundo Robert
+                        </a>{" "}
+                        from a{" "}
+                        <a className="underline hover:text-white dark:hover:text-black" href="https://www.figma.com/design/7ShAwWYXKblCnjVS7eTGrn/Frontend-Challenge--Community-?node-id=5-2274&t=Gcnz42KiFLPjo4ob-0" target="_blank">
+                            Figma community design
+                        </a>
+                    </p>
                 </div>
             </div>
             <div className='flex gap-4 self-center md:self-auto'>

@@ -1,73 +1,79 @@
-# React + TypeScript + Vite
+# 🛍️ Ecommerce UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **ecommerce UI implementation** built as a *Figma-to-Code challenge*.  
+This project is my personal interpretation of a UI design from a community frontend challenge, rebuilt with a focus on clean architecture, reusable components, and smooth user experience.
 
-Currently, two official plugins are available:
+🔗 Original Figma Design:  
+https://www.figma.com/design/7ShAwWYXKblCnjVS7eTGrn/Frontend-Challenge--Community-?node-id=5-2274&t=Gcnz42KiFLPjo4ob-0
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🛒 Fully functional shopping cart (add / remove / quantity control)
+- 💰 Dynamic summary calculation (subtotal, tax, shipping, discount)
+- 🌗 Light / dark theme support
+- ⚡ Smooth UI animations with Framer Motion
+- 🧠 Global state management with Redux Toolkit
+- 📱 Fully responsive design (mobile + desktop)
+- 🎯 Clean separation of UI and business logic
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧱 Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React**
+- **TypeScript**
+- **Redux Toolkit**
+- **React Redux**
+- **React Router**
+- **Framer Motion**
+- **Tailwind CSS**
+- **Vite**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧠 Architecture Highlights
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Centralized cart state with Redux Toolkit
+- Derived calculations (summary) from store state
+- Component-based UI structure:
+  - `Bag`
+  - `BagItem`
+  - `Summary`
+  - `ProductCTA`
+- Reusable hooks (`useAppDispatch`, `useAppSelector`)
+- Strong TypeScript typing for product and cart models
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 UI & UX
+
+This project focuses heavily on:
+
+- Clear hierarchy in product/cart views
+- Immediate feedback when interacting with cart
+- Smooth transitions and micro-interactions
+- Minimal, modern ecommerce aesthetic
+
+---
+
+## ⏱️ Development Time
+
+~10 hours of development across multiple focused sessions, covering:
+
+- UI implementation from Figma
+- Redux Toolkit state management
+- Cart logic (add / remove / quantity system)
+- Responsive layout (mobile + desktop)
+- Animations with Framer Motion
+  
+---
+## 📬 Contact 
+
+Feel free to reach out if you want to collaborate, have any questions, or just connect. 
+
+- 📧 Email: robertf.coder@gmail.com 
+- 💼 LinkedIn: [https://www.linkedin.com/in/robertfacundodev/](https://www.linkedin.com/in/robertfacundodev/) 
+- 🌐 Portfolio: [https://facundorobert.vercel.app/](https://facundorobert.vercel.app/) 
+- 💻 GitHub: [https://github.com/RobertFacundo](https://github.com/RobertFacundo)

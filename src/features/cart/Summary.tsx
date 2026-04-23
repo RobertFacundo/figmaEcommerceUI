@@ -1,4 +1,5 @@
 import { useAppSelector } from "../../shared/redux/store/hooks";
+import { motion } from 'framer-motion'
 
 const Summary = () => {
     const cart = useAppSelector((state) => state.cart.items);
@@ -10,7 +11,7 @@ const Summary = () => {
 
     const shipping = cart.length > 0 ? 20 : 0;
     const tax = subtotal * 0.05;
-    const discount = subtotal > 200 ? 10 : 0;
+    const discount = subtotal * 0.25;
 
     const total = subtotal + shipping + tax - discount;
 
@@ -28,7 +29,12 @@ const Summary = () => {
     }
 
     return (
-        <div className="bg-white dark:bg-black rounded-2xl p-6 flex flex-col gap-4">
+        <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white dark:bg-black rounded-2xl p-6 flex flex-col gap-4 md:max-w-[460px] shadow-md dark:shadow-white/5 dark:text-white "
+        >
 
             <h2 className="text-xl font-semibold text-black dark:text-white">
                 Summary
@@ -49,7 +55,7 @@ const Summary = () => {
                 <span>${tax.toFixed(2)}</span>
             </div>
 
-            <div className="flex justify-between text-sm text-red-500">
+            <div className="flex justify-between text-sm text-green-500">
                 <span>Discount</span>
                 <span>- ${discount.toFixed(2)}</span>
             </div>
@@ -65,7 +71,7 @@ const Summary = () => {
                 Checkout
             </button>
 
-        </div>
+        </motion.div>
     );
 };
 
