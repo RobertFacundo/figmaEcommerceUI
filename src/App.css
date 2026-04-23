@@ -1,6 +1,6 @@
 body{
     font-family: "Fenix", serif;
-    background-color: white;
+    background-color: rgb(253, 253, 253);
 }
 body.dark{
     background-color: rgb(22, 21, 21);
